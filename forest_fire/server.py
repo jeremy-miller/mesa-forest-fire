@@ -47,8 +47,6 @@ model_params = {
     "width": GRID_WIDTH,
     "height": GRID_HEIGHT,
     "tree_density": mesa.visualization.Slider("Tree Density", 0.65, 0.01, 1.0, 0.01),
-    "tree_ignition_rate": mesa.visualization.Slider("Tree Ignition Rate", 0.10, 0.01, 1.0, 0.01),
-    "tree_regrowth_rate": mesa.visualization.Slider("Tree Regrowth Rate", 0.25, 0.01, 1.0, 0.01),
 }
 
 server = mesa.visualization.ModularServer(

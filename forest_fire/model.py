@@ -9,15 +9,11 @@ class ForestFire(mesa.Model):
         width=100,
         height=100,
         tree_density=0.65,
-        tree_ignition_rate=0.1,
-        tree_regrowth_rate=0.25,
     ):
         super().__init__()
         self.width = width
         self.height = height
         self.tree_density = tree_density
-        self.tree_ignition_rate = tree_ignition_rate
-        self.tree_regrowth_rate = tree_regrowth_rate
         self.schedule = mesa.time.RandomActivation(self)
         self.grid = mesa.space.SingleGrid(self.width, self.height, torus=False)
 
