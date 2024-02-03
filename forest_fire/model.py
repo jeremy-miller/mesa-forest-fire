@@ -35,12 +35,16 @@ class ForestFire(mesa.Model):
 
     def _initialize_trees(self):
         for _contents, pos in self.grid.coord_iter():
+            tree = Tree(self.next_id(), self, pos)
             if self.random.random() < self.tree_density:
-                tree = Tree(self.next_id(), self, pos)
-                if pos[0] == 0:
+                if pos[0] == 0:  # set first column to Burning
                     tree.status = "Burning"
-                self.schedule.add(tree)
-                self.grid.place_agent(tree, pos)
+                else:
+                    tree.status = "Fine"
+            else:
+                tree.status = "Burned"
+            self.schedule.add(tree)
+            self.grid.place_agent(tree, pos)
 
     def step(self):
         self.schedule.step()

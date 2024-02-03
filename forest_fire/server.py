@@ -9,8 +9,8 @@ CANVAS_HEIGHT = 500
 
 COLORS = {
     "Fine": "#00AA00",
-    "Burning": "#880000",
-    "Burned": "#000000",
+    "Burning": "#FF0000",
+    "Burned": "#3D2B1F",
 }
 
 
